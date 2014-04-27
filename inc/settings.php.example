@@ -1,0 +1,11 @@
+<?php 
+  // database settings
+  $host  = "";
+  $user  = "";
+  $pass  = "";
+  
+  $dbName        = "mailserver";
+  $tableDomains  = "virtual_domains";
+  $tableInboxes  = "virtual_users";
+  $tableAliases  = "virtual_aliases";
+?>
