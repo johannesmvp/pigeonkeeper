@@ -1,4 +1,12 @@
 <?php
+  // start the session
+  session_start();
+  
+  // check if logged in
+  if(!isset($_SESSION['id']))
+    header("Location: login.php");
+
+
   // include the settings php file; return error if failed or not configured.
   include("inc/settings.php");
   

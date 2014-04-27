@@ -22,7 +22,7 @@
           <ul class="dropdown-menu">
             <li><a href="#">Change password</a></li>
             <li class="divider"></li>
-            <li><a href="#">Log off</a></li>
+            <li><a href="logout.php">Log off</a></li>
           </ul>
         </li>
       </ul>
