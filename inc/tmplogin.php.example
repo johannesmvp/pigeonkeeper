@@ -1,0 +1,5 @@
+<?
+  // temporary login data
+  $tmpUsername = "";
+  $tmpPassword = "";
+?>

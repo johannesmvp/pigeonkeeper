@@ -1,3 +1,25 @@
+<?
+  session_start();
+
+  // check if we are logged in already
+  if(isset($_SESSION['id']))
+    header("Location: ./");
+
+  // check if something was POSTed
+  if( isset($_POST) && isset($_POST["username"]) && isset($_POST["password"]) )
+  {
+    // check if the data matches tmp login data
+    require("inc/tmplogin.php");
+
+    if($tmpUsername != "" && $_POST['username'] == $tmpUsername)
+      if($tmpPassword != "" && $_POST['password'] == $tmpPassword)
+      {
+        $_SESSION['id'] = 1;
+        header("Location: ./");
+      }
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -29,10 +51,10 @@
 
     <div class="container">
 
-      <form class="form-signin" role="form">
+      <form class="form-signin" role="form" method="POST" target="">
         <h2 class="form-signin-heading">Please sign in</h2>
-        <input type="text" class="form-control" placeholder="Username" required autofocus>
-        <input type="password" class="form-control" placeholder="Password" required>
+        <input type="text" name="username" class="form-control" placeholder="Username" required autofocus>
+        <input type="password" name="password" class="form-control" placeholder="Password" required>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
       </form>
 
