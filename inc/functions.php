@@ -24,4 +24,16 @@
     // redirect
     header("Location: ./");
   }
+
+
+  // logs out the current user
+  function logout()
+  {
+    session_start();
+  
+    if(isset($_SESSION['id']))
+      unset($_SESSION['id']);
+  
+    header("Location: ./");
+  }
 ?>
