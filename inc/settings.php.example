@@ -1,4 +1,7 @@
 <?php 
+  // strings and stuff
+  $sitename = "Pigeon keeper";
+
   // database settings
   $host  = "";
   $user  = "";
