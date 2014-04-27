@@ -1,4 +1,6 @@
 <?
+  require("inc/functions.php");
+
   session_start();
 
   // check if we are logged in already
@@ -8,7 +10,7 @@
   // check if something was POSTed
   if( isset($_POST) && isset($_POST["username"]) && isset($_POST["password"]) )
   {
-    // check if the data matches tmp login data
+/*    // check if the data matches tmp login data
     require("inc/tmplogin.php");
 
     if($tmpUsername != "" && $_POST['username'] == $tmpUsername)
@@ -16,7 +18,8 @@
       {
         $_SESSION['id'] = 1;
         header("Location: ./");
-      }
+      }*/
+    login($_POST["username"], $_POST["password"]);
   }
 ?>
 
