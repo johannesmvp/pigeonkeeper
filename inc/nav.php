@@ -17,8 +17,6 @@
         <li><a href="#">Domains</a></li>
         <li><a href="#">Inboxes</a></li>
         <li><a href="#">Aliases</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span> <b class="caret"></b></a>
           <ul class="dropdown-menu">
