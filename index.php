@@ -1,3 +1,14 @@
+<?php
+  // include the settings php file; return error if failed or not configured.
+  include("inc/settings.php");
+  
+  if(!isset($host) || $host == "")
+  {
+    print("Error: make sure inc/settings.php exists!");
+    exit;
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
